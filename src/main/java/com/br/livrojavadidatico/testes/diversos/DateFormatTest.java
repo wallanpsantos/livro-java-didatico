@@ -78,5 +78,14 @@ public class DateFormatTest {
 
         // Exemplo Saída: Data e Hora formatada para pt-br: 21/09/2021 21:55
         System.out.println("Data e Hora formatada para pt-br: " + localDateTime.format(formatacaoPorLocale));
+
+        /**
+        * Diferença de Datas em dias usando java.time.temporal.ChronoUnit
+        */
+        LocalDate venc = LocalDate.of(2022, 10, 27);
+        LocalDate atual = LocalDate.of(2022, 9, 1);
+
+        // Exemplo Saída: Diferença em dias -> 56     
+        System.out.println("Diferença em dias -> " + ChronoUnit.DAYS.between(atual, venc));
     }
 }
